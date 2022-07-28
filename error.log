@@ -1,0 +1,183 @@
+2022-07-27 22:08:12,045 INFO:             errors [in /Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py:82]
+2022-07-27 22:08:41,352 ERROR:             Exception on /upload [POST] [in /Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 254, in run_tesseract
+    proc = subprocess.Popen(cmd_args, **subprocess_args())
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'tesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py", line 41, in upload_file
+    rec_string = process_image(path=path)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/pre_img.py", line 25, in process_image
+    rec_string =  pytesseract.image_to_string(cao,lang='chi_sim')
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 416, in image_to_string
+    return {
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 419, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 286, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 258, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2022-07-27 22:09:44,662 ERROR:             Exception on /upload [POST] [in /Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 254, in run_tesseract
+    proc = subprocess.Popen(cmd_args, **subprocess_args())
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'tesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py", line 41, in upload_file
+    rec_string = process_image(path=path)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/pre_img.py", line 25, in process_image
+    rec_string =  pytesseract.image_to_string(cao,lang='chi_sim')
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 416, in image_to_string
+    return {
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 419, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 286, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 258, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2022-07-27 22:09:55,105 ERROR:             Exception on /upload [POST] [in /Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 254, in run_tesseract
+    proc = subprocess.Popen(cmd_args, **subprocess_args())
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'tesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py", line 41, in upload_file
+    rec_string = process_image(path=path)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/pre_img.py", line 25, in process_image
+    rec_string =  pytesseract.image_to_string(cao,lang='chi_sim')
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 416, in image_to_string
+    return {
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 419, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 286, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 258, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2022-07-27 22:10:47,903 ERROR:             Exception on /upload [POST] [in /Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 254, in run_tesseract
+    proc = subprocess.Popen(cmd_args, **subprocess_args())
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/shing/opt/anaconda3/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'tesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py", line 41, in upload_file
+    rec_string = process_image(path=path)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/pre_img.py", line 25, in process_image
+    rec_string =  pytesseract.image_to_string(cao,lang='chi_sim')
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 416, in image_to_string
+    return {
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 419, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 286, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 258, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2022-07-27 22:21:54,454 INFO:             errors [in /Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py:82]
+2022-07-27 22:22:11,935 ERROR:             Exception on /upload [POST] [in /Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py", line 41, in upload_file
+    rec_string = process_image(path=path)
+  File "/Users/shing/WorkSpace/sideProject/jacob/flask-ocr/pre_img.py", line 25, in process_image
+    rec_string =  pytesseract.image_to_string(cao,lang='chi_sim')
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 416, in image_to_string
+    return {
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 419, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 286, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/Users/shing/opt/anaconda3/lib/python3.9/site-packages/pytesseract/pytesseract.py", line 262, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/local/share/tessdata/chi_sim.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'chi_sim\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2022-07-27 22:25:19,267 INFO:             errors [in /Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py:82]
+2022-07-27 22:28:05,727 INFO:             errors [in /Users/shing/WorkSpace/sideProject/jacob/flask-ocr/server.py:82]
